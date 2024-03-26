@@ -1,0 +1,14 @@
+/* colors.css */
+:root {
+    --color-primary: #ff0000;
+    --color-secondary: #00ff00;
+    /* Add more custom color variables as needed */
+    --accent-color: #FFC43F;
+    --dark-color: #222222;
+    --light-dark-color: #727272;
+    --light-color: #fff;
+    --grey-color: #dbdbdb;
+    --light-grey-color: #fafafa;
+    --primary-color: #6995B1;
+    --light-primary-color: #eef1f3;
+  }
