@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
+import { useCartStore } from '../../../store/cart-store';
 
 const ShowProductCard = ({product}) => {
+
+  const addCartItem = useCartStore(state=> state.addCartItem)
+  function addProductToCart(product){
+    addCartItem(product)
+  }
   return (
     <article className='flex flex-col justify-between p-4 m-5 rounded-md shadow-sm max-w-64 shadow-current ' >
       <header className='h-40 rounded-md' >
@@ -16,7 +22,7 @@ const ShowProductCard = ({product}) => {
       </div>
 
       <footer className='flex justify-end '>
-        <button className='px-3 py-1 text-white bg-blue-500 rounded-md'>add to cart</button>
+        <button onClick={()=> addProductToCart(product)}  className='px-3 py-1 text-white bg-blue-500 rounded-md'>add to cart</button>
       </footer>
     </article>
   )

@@ -7,7 +7,7 @@ import { getAllProducts } from '../../api/products';
 const ProductContainer = () => {
 let {data,isLoading,isSuccess,isError} = useQuery({ queryKey: ['products'], queryFn: getAllProducts });
 
-console.log(data?.products[0])
+
   return (
     <div className='flex flex-wrap justify-center mt-3'>
     {isLoading && <h1 className='text-center'>loading ...</h1>} 
